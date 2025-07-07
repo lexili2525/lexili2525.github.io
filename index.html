@@ -1,0 +1,57 @@
+<!-- GitHub Pages: Basic HTML for LLM Overview -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lexi Li | LLM Learning Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.6; max-width: 800px; }
+    h1, h2 { color: #333; }
+    nav { margin-bottom: 2rem; }
+    nav a { margin-right: 15px; text-decoration: none; color: #0077cc; }
+  </style>
+</head>
+<body>
+  <h1>Lexi Li | LLM Learning Hub</h1>
+
+  <nav>
+    <a href="#overview">Overview of Transformers</a>
+    <a href="#chapters">Chapters</a>
+  </nav>
+
+  <section id="overview">
+    <h2>Overview of Transformers</h2>
+    <p>
+      GenAI models like ChatGPT, Claude, and Gemini are language models trained on vast amounts of text data—from books and Wikipedia to articles across the internet. 
+      The breakthrough that powers these models is the <strong>Transformer architecture</strong>.
+    </p>
+
+    <p>
+      The original Transformer consists of two parts: the <strong>encoder stack</strong> and the <strong>decoder stack</strong>. The encoder processes input text (like a sentence) to extract and summarize its meaning. The decoder then takes that summary and generates new text—such as a translation, an explanation, or free-form text.
+    </p>
+
+    <p>
+      To make the output understandable, the decoder's result goes through a <strong>linear layer</strong> and a <strong>softmax function</strong>, turning it into probabilities over the model's vocabulary.
+    </p>
+
+    <p>
+      Stacking multiple encoder and decoder layers allows the model to build increasingly deep understanding—from word-level relationships to phrase structures and eventually to high-level meaning, like tone or intent.
+    </p>
+
+    <h3>Examples of Transformer Models</h3>
+    <ul>
+      <li><strong>GPT-3 / GPT-4</strong>: Decoder-only, no encoder stack</li>
+      <li><strong>ChatGPT</strong>: Decoder-only (built on GPT models)</li>
+      <li><strong>Claude</strong>: Decoder-only</li>
+      <li><strong>T5</strong>: Encoder-Decoder (used for tasks like translation, summarization)</li>
+      <li><strong>BERT</strong>: Encoder-only (used for classification, embeddings)</li>
+    </ul>
+  </section>
+
+  <section id="chapters">
+    <h2>Chapters Coming Soon</h2>
+    <p>I'll be adding bite-sized lessons on Tokenization, Self-Attention, Evaluation, and Building Your Own AI Tools. Stay tuned!</p>
+  </section>
+</body>
+</html>
