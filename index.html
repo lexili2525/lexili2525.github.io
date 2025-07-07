@@ -1,4 +1,3 @@
-<!-- GitHub Pages: Basic HTML for LLM Overview -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,69 +5,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.6; max-width: 800px; }
+    body { font-family: Arial, sans-serif; margin: 0; display: flex; }
+    nav {
+      width: 220px;
+      background-color: #f4f4f4;
+      padding: 1rem;
+      height: 100vh;
+      position: fixed;
+      overflow-y: auto;
+    }
+    nav ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    nav ul li {
+      margin-bottom: 0.5rem;
+    }
+    nav ul li ul {
+      margin-left: 1rem;
+      margin-top: 0.3rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+    main {
+      margin-left: 240px;
+      padding: 2rem;
+      max-width: 800px;
+    }
     h1, h2 { color: #333; }
-    nav { margin-bottom: 2rem; }
-    nav a { margin-right: 15px; text-decoration: none; color: #0077cc; }
   </style>
 </head>
 <body>
-  <h1>Lexi Li | LLM Learning Hub</h1>
-
   <nav>
-    <a href="#overview">Overview of Transformers</a>
-    <a href="#encoder-decoder">Encoder/Decoder Details</a>
-    <a href="#chapters">Chapters</a>
+    <h3>Lexi Li | LLM Hub</h3>
+    <ul>
+      <li>
+        <a href="#transformers">Transformers</a>
+        <ul>
+          <li><a href="#overview">Overview of Transformers</a></li>
+          <li><a href="#encoder-decoder">Encoder/Decoder Details</a></li>
+        </ul>
+      </li>
+      <li><a href="#chapters">Upcoming Chapters</a></li>
+    </ul>
   </nav>
 
-  <section id="overview">
-    <h2>Overview of Transformers</h2>
-    <p>
-      GenAI models like ChatGPT, Claude, and Gemini are language models trained on vast amounts of text data—from books and Wikipedia to articles across the internet. 
-      The breakthrough that powers these models is the <strong>Transformer architecture</strong>.
-    </p>
+  <main>
+    <section id="transformers">
+      <h2>Transformers</h2>
+    </section>
 
-    <p>
-      The original Transformer consists of two parts: the <strong>encoder stack</strong> and the <strong>decoder stack</strong>. The encoder processes input text (like a sentence) to extract and summarize its meaning. The decoder then takes that summary and generates new text—such as a translation, an explanation, or free-form text.
-    </p>
+    <section id="overview">
+      <h3>Overview of Transformers</h3>
+      <p>
+        GenAI models like ChatGPT, Claude, and Gemini are language models trained on vast amounts of text data—from books and Wikipedia to articles across the internet.
+        The breakthrough that powers these models is the <strong>Transformer architecture</strong>.
+      </p>
+      <p>
+        The original Transformer consists of two parts: the <strong>encoder stack</strong> and the <strong>decoder stack</strong>. The encoder processes input text (like a sentence) to extract and summarize its meaning. The decoder then takes that summary and generates new text—such as a translation, an explanation, or free-form text.
+      </p>
+      <p>
+        To make the output understandable, the decoder's result goes through a <strong>linear layer</strong> and a <strong>softmax function</strong>, turning it into probabilities over the model's vocabulary.
+      </p>
+      <p>
+        Stacking multiple encoder and decoder layers allows the model to build increasingly deep understanding—from word-level relationships to phrase structures and eventually to high-level meaning, like tone or intent.
+      </p>
+      <ul>
+        <li><strong>GPT-3 / GPT-4</strong>: Decoder-only</li>
+        <li><strong>ChatGPT</strong>: Decoder-only</li>
+        <li><strong>Claude</strong>: Decoder-only</li>
+        <li><strong>T5</strong>: Encoder-Decoder</li>
+        <li><strong>BERT</strong>: Encoder-only</li>
+      </ul>
+    </section>
 
-    <p>
-      To make the output understandable, the decoder's result goes through a <strong>linear layer</strong> and a <strong>softmax function</strong>, turning it into probabilities over the model's vocabulary.
-    </p>
+    <section id="encoder-decoder">
+      <h3>Encoder/Decoder Details</h3>
+      <p>
+        In this session, we will dive deeper into the internal structure of both the encoder and the decoder. You'll learn how self-attention works, how feed-forward layers transform the hidden states, and why residual connections and layer normalization are essential.
+      </p>
+      <p>
+        We will also explore why multi-head attention helps the model capture different types of relationships in text and how masking is used in decoders to ensure proper autoregressive behavior.
+      </p>
+      <p>
+        Visual diagrams and real-world examples will help bring these concepts to life in the next chapters.
+      </p>
+    </section>
 
-    <p>
-      Stacking multiple encoder and decoder layers allows the model to build increasingly deep understanding—from word-level relationships to phrase structures and eventually to high-level meaning, like tone or intent.
-    </p>
-
-    <h3>Examples of Transformer Models</h3>
-    <ul>
-      <li><strong>GPT-3 / GPT-4</strong>: Decoder-only, no encoder stack</li>
-      <li><strong>ChatGPT</strong>: Decoder-only (built on GPT models)</li>
-      <li><strong>Claude</strong>: Decoder-only</li>
-      <li><strong>T5</strong>: Encoder-Decoder (used for tasks like translation, summarization)</li>
-      <li><strong>BERT</strong>: Encoder-only (used for classification, embeddings)</li>
-    </ul>
-  </section>
-
-  <section id="encoder-decoder">
-    <h2>Encoder/Decoder Details</h2>
-    <p>
-      In this session, we will dive deeper into the internal structure of both the encoder and the decoder. You'll learn how self-attention works, how feed-forward layers transform the hidden states, and why residual connections and layer normalization are essential.
-    </p>
-
-    <p>
-      We will also explore why multi-head attention helps the model capture different types of relationships in text and how masking is used in decoders to ensure proper autoregressive behavior.
-    </p>
-
-    <p>
-      Visual diagrams and real-world examples will help bring these concepts to life in the next chapters.
-    </p>
-  </section>
-
-  <section id="chapters">
-    <h2>Chapters Coming Soon</h2>
-    <p>I'll be adding bite-sized lessons on Tokenization, Self-Attention, Evaluation, and Building Your Own AI Tools. Stay tuned!</p>
-  </section>
+    <section id="chapters">
+      <h2>Chapters Coming Soon</h2>
+      <p>I'll be adding bite-sized lessons on Tokenization, Self-Attention, Evaluation, and Building Your Own AI Tools. Stay tuned!</p>
+    </section>
+  </main>
 
 </body>
 </html>
